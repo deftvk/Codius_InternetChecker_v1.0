@@ -73,7 +73,7 @@ Public Class frmMain
         frm.chkStartWithWin.Checked = autoRun
 
         If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
-            If autoRun <> frm.chkStartWithWin.Checked Then AppConfig.SetAutorun(autoRun)
+            If autoRun <> frm.chkStartWithWin.Checked Then AppConfig.SetAutorun(frm.chkStartWithWin.Checked)
 
             If Val(frm.txtCount.Text) > 1 Then
                 My.Settings.Period = Val(frm.txtCount.Text)
